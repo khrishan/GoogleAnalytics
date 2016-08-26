@@ -35,7 +35,7 @@ public class HelloAnalytics {
   private static final String VIEW_ID = "<REPLACE_WITH_VIEW_ID>";
   public static void main(String[] args) {
     try {
-      Analyticsreporting service = initializeAnalyticsReporting();
+      AnalyticsReporting service = initializeAnalyticsReporting();
 
       GetReportsResponse response = getReport(service);
       printResponse(response);
@@ -51,7 +51,7 @@ public class HelloAnalytics {
    * @throws IOException
    * @throws GeneralSecurityException
    */
-  private static Analyticsreporting initializeAnalyticsReporting() throws GeneralSecurityException, IOException {
+  private static AnalyticsReporting initializeAnalyticsReporting() throws GeneralSecurityException, IOException {
 
     HttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
     GoogleCredential credential = new GoogleCredential.Builder()
@@ -59,11 +59,11 @@ public class HelloAnalytics {
         .setJsonFactory(JSON_FACTORY)
         .setServiceAccountId(SERVICE_ACCOUNT_EMAIL)
         .setServiceAccountPrivateKeyFromP12File(new File(KEY_FILE_LOCATION))
-        .setServiceAccountScopes(AnalyticsreportingScopes.all())
+        .setServiceAccountScopes(AnalyticsReportingScopes.all())
         .build();
 
     // Construct the Analytics Reporting service object.
-    return new Analyticsreporting.Builder(httpTransport, JSON_FACTORY, credential)
+    return new AnalyticsReporting.Builder(httpTransport, JSON_FACTORY, credential)
         .setApplicationName(APPLICATION_NAME).build();
   }
 
@@ -76,7 +76,7 @@ public class HelloAnalytics {
    * @return GetReportResponse
    * @throws IOException
    */
-  private static GetReportsResponse getReport(Analyticsreporting service) throws IOException {
+  private static GetReportsResponse getReport(AnalyticsReporting service) throws IOException {
     // Create the DateRange object.
     DateRange dateRange = new DateRange();
     dateRange.setStartDate("7DaysAgo");
