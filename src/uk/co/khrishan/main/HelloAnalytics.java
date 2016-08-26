@@ -11,19 +11,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.google.analyticsreporting.v4.AnalyticsreportingScopes;
-import com.google.analyticsreporting.v4.Analyticsreporting;
-import com.google.analyticsreporting.v4.model.ColumnHeader;
-import com.google.analyticsreporting.v4.model.DateRange;
-import com.google.analyticsreporting.v4.model.DateRangeValues;
-import com.google.analyticsreporting.v4.model.Dimension;
-import com.google.analyticsreporting.v4.model.GetReportsRequest;
-import com.google.analyticsreporting.v4.model.GetReportsResponse;
-import com.google.analyticsreporting.v4.model.Metric;
-import com.google.analyticsreporting.v4.model.MetricHeaderEntry;
-import com.google.analyticsreporting.v4.model.Report;
-import com.google.analyticsreporting.v4.model.ReportRequest;
-import com.google.analyticsreporting.v4.model.ReportRow;
+import com.google.api.services.analyticsreporting.v4.AnalyticsReportingScopes;
+import com.google.api.services.analyticsreporting.v4.AnalyticsReporting;
+import com.google.api.services.analyticsreporting.v4.model.ColumnHeader;
+import com.google.api.services.analyticsreporting.v4.model.DateRange;
+import com.google.api.services.analyticsreporting.v4.model.DateRangeValues;
+import com.google.api.services.analyticsreporting.v4.model.Dimension;
+import com.google.api.services.analyticsreporting.v4.model.GetReportsRequest;
+import com.google.api.services.analyticsreporting.v4.model.GetReportsResponse;
+import com.google.api.services.analyticsreporting.v4.model.Metric;
+import com.google.api.services.analyticsreporting.v4.model.MetricHeaderEntry;
+import com.google.api.services.analyticsreporting.v4.model.Report;
+import com.google.api.services.analyticsreporting.v4.model.ReportRequest;
+import com.google.api.services.analyticsreporting.v4.model.ReportRow;
 
 public class HelloAnalyticsReporting {
   private static final String APPLICATION_NAME = "Hello Analytics Reporting";
