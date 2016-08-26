@@ -28,11 +28,11 @@ import com.google.api.services.analyticsreporting.v4.model.ReportRequest;
 import com.google.api.services.analyticsreporting.v4.model.ReportRow;
 
 public class HelloAnalytics {
-  private static final String APPLICATION_NAME = "Hello Analytics Reporting";
+  private static final String APPLICATION_NAME = "ApplicationName";
   private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
-  private static final String KEY_FILE_LOCATION = "<REPLACE_WITH_P12_LOC>";
-  private static final String SERVICE_ACCOUNT_EMAIL = "<REPLACE_WITH_EMAIL>";
-  private static final String VIEW_ID = "<REPLACE_WITH_VIEW_ID>";
+  private static final String KEY_FILE_LOCATION = "client_secrets.p12";
+  private static final String SERVICE_ACCOUNT_EMAIL = "testServiceAccountEmailExample.gserviceaccount.com";
+  private static final String VIEW_ID = "123456789";
   public static void main(String[] args) {
     try {
       AnalyticsReporting service = initializeAnalyticsReporting();
